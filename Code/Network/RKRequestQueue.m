@@ -531,7 +531,12 @@ static const NSTimeInterval kFlushDelay = 0.3;
         [_delegate requestQueue:self didFailRequest:request withError:error];
     }
 
-    [self removeLoadingRequest:request];
+    // [self removeLoadingRequest:request];
+    
+    // Crash on timeout due to multiple callbacks to delegate?
+    // https://github.com/RestKit/RestKit/issues/760
+    [self removeRequest:request];
+    
     [self loadNextInQueue];
 }
 
