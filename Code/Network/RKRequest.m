@@ -669,9 +669,9 @@ RKRequestMethod RKRequestMethodTypeFromName(NSString *methodName) {
                                                           userInfo:userInfo];
     }
 
-    // NOTE: This notification must be posted last as the request queue releases the request when it
-    // receives the notification
-    [[NSNotificationCenter defaultCenter] postNotificationName:RKRequestDidFinishLoadingNotification object:self];
+//    // NOTE: This notification must be posted last as the request queue releases the request when it
+//    // receives the notification
+//    [[NSNotificationCenter defaultCenter] postNotificationName:RKRequestDidFinishLoadingNotification object:self];
 }
 
 - (void)updateInternalCacheDate
@@ -718,9 +718,9 @@ RKRequestMethod RKRequestMethodTypeFromName(NSString *methodName) {
                                                         object:self
                                                       userInfo:userInfo];
 
-    // NOTE: This notification must be posted last as the request queue releases the request when it
-    // receives the notification
-    [[NSNotificationCenter defaultCenter] postNotificationName:RKRequestDidFinishLoadingNotification object:self];
+//    // NOTE: This notification must be posted last as the request queue releases the request when it
+//    // receives the notification
+//    [[NSNotificationCenter defaultCenter] postNotificationName:RKRequestDidFinishLoadingNotification object:self];
 }
 
 - (BOOL)isGET
